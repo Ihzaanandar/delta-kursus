@@ -11,7 +11,11 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Inter untuk tampilan modern dan profesional -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome untuk Icon Modern -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
 
@@ -19,11 +23,9 @@
 
     <header>
 
-        <h1>Kursus Bahasa Global</h1>
-
-        <p class="tagline">
-            Belajar bahasa asing dengan metode modern dan menyenangkan
-        </p>
+        <div class="logo">
+            <h1>Global<span class="accent">Course</span></h1>
+        </div>
 
         <nav>
             <!-- Checkbox & Label: Digunakan untuk logika menu hamburger tanpa JavaScript -->
@@ -45,58 +47,69 @@
     </header>
 
 
-    <section class="hero">
+    <section class="hero reveal">
+        <div class="hero-content">
+            <span class="badge">#1 Platform Kursus Bahasa</span>
+            <h2>Tingkatkan Karier Global Kamu</h2>
 
-        <h2>Mulai Perjalanan Bahasa Kamu</h2>
+            <p>
+                Kami menyediakan berbagai kursus bahasa seperti Inggris,
+                Jepang, Korea, Mandarin, dan Jerman dengan pengajar <i>native speaker</i>.
+            </p>
 
-        <p>
-            Kami menyediakan berbagai kursus bahasa seperti Inggris,
-            Jepang, Korea, Mandarin, dan Jerman dengan pengajar profesional.
+            <button class="btn-primary" onclick="scrollProgram()">Mulai Belajar Sekarang <i
+                    class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </section>
+
+
+    <section id="tentang" class="reveal">
+        <div class="section-header">
+            <h2>Lebih Dekat Dengan Kami</h2>
+            <p class="subtitle">Metode teruji untuk hasil yang nyata.</p>
+        </div>
+        Kursus Bahasa Global adalah lembaga pendidikan yang membantu
+        pelajar dan masyarakat umum untuk mempelajari bahasa asing
+        secara efektif. Program kami dirancang untuk semua usia
+        dengan metode pembelajaran yang interaktif dan praktis.
         </p>
-
-        <button onclick="scrollProgram()">Lihat Program</button>
 
     </section>
 
 
-    <section id="tentang">
-
-        <h2>Tentang Kursus</h2>
-
-        <p>
-            Kursus Bahasa Global adalah lembaga pendidikan yang membantu
-            pelajar dan masyarakat umum untuk mempelajari bahasa asing
-            secara efektif. Program kami dirancang untuk semua usia
-            dengan metode pembelajaran yang interaktif dan praktis.
-        </p>
-
     </section>
 
 
-    <section id="program">
-
-        <h2>Program Kursus</h2>
+    <section id="program" class="reveal">
+        <div class="section-header">
+            <h2>Pilihan Program Terbaik</h2>
+            <p class="subtitle">Pilih bahasa yang ingin kamu kuasai hari ini.</p>
+        </div>
 
         <div class="cards">
 
             <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-flag-usa"></i></div>
                 <h3>Bahasa Inggris</h3>
-                <p>Program populer untuk komunikasi internasional.</p>
+                <p>Program intensif untuk komunikasi akademik & bisnis internasional.</p>
             </div>
 
             <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-torii-gate"></i></div>
                 <h3>Bahasa Jepang</h3>
-                <p>Cocok untuk studi atau bekerja di Jepang.</p>
+                <p>Persiapan JLPT dan komunikasi sehari-hari untuk studi atau karir.</p>
             </div>
 
             <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-bowl-rice"></i></div>
                 <h3>Bahasa Korea</h3>
-                <p>Belajar bahasa Korea dengan metode modern.</p>
+                <p>Kuasai tata bahasa dan percakapan ala penutur asli (Native).</p>
             </div>
 
             <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-yin-yang"></i></div>
                 <h3>Bahasa Mandarin</h3>
-                <p>Bahasa bisnis internasional yang penting.</p>
+                <p>Bahasa bisnis global masa depan yang wajib dikuasai.</p>
             </div>
 
         </div>
@@ -135,9 +148,11 @@
     </section>
 
 
-    <section id="alumni">
-
-        <h2>Alumni Kami</h2>
+    <section id="alumni" class="reveal">
+        <div class="section-header">
+            <h2>Kisah Sukses Alumni</h2>
+            <p class="subtitle">Mereka telah membuktikannya.</p>
+        </div>
 
         <!-- Alumni Container: Menggunakan flex-wrap agar gambar turun ke bawah jika layar sempit -->
         <div class="alumni-container">
@@ -150,9 +165,11 @@
     </section>
 
 
-    <section id="daftar">
-
-        <h2>Form Pendaftaran</h2>
+    <section id="daftar" class="reveal">
+        <div class="section-header">
+            <h2>Langkah Pertama Anda</h2>
+            <p class="subtitle">Daftarkan diri Anda sekarang dan dapatkan harga spesial.</p>
+        </div>
 
         <form id="formDaftar">
 
@@ -178,21 +195,25 @@
 
 
     <footer id="kontak">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Global<span class="accent">Course</span></h3>
+                <p>Gateway to your international future.</p>
+            </div>
 
-        <h3>Kontak Kami</h3>
+            <div class="footer-contact">
+                <p><i class="fa-brands fa-whatsapp"></i> 0812-3456-7890</p>
+                <p><i class="fa-regular fa-envelope"></i> admin@globalcourse.id</p>
+            </div>
 
-        <p>WhatsApp : 0812-3456-7890</p>
-        <p>Email : kursusglobal@email.com</p>
-
-        <div class="sosmed">
-
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">TikTok</a>
-
+            <div class="sosmed">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            </div>
         </div>
 
-        <p class="copy">© 2026 Kursus Bahasa Global</p>
+        <p class="copy">&copy; 2026 Global Course Indonesia. All rights reserved.</p>
 
     </footer>
 
