@@ -1,195 +1,203 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <!-- Meta viewport: Penting agar website tampil proporsional di perangkat mobile (HP) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kursus Bahasa Global</title>
+    <title>Kursus Bahasa Global</title>
 
-<link rel="stylesheet" href="uts ppw.css">
+    <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<header>
+    <header>
 
-<h1>Kursus Bahasa Global</h1>
+        <h1>Kursus Bahasa Global</h1>
 
-<p class="tagline">
-Belajar bahasa asing dengan metode modern dan menyenangkan
-</p>
+        <p class="tagline">
+            Belajar bahasa asing dengan metode modern dan menyenangkan
+        </p>
 
-<nav>
-<a href="#tentang">Tentang</a>
-<a href="#program">Program</a>
-<a href="#alumni">Alumni</a>
-<a href="#daftar">Pendaftaran</a>
-<a href="#kontak">Kontak</a>
-</nav>
+        <nav>
+            <!-- Checkbox & Label: Digunakan untuk logika menu hamburger tanpa JavaScript -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="nav-links">
+                <a href="#tentang">Tentang</a>
+                <a href="#program">Program</a>
+                <a href="#alumni">Alumni</a>
+                <a href="#daftar">Pendaftaran</a>
+                <a href="#kontak">Kontak</a>
+            </div>
+        </nav>
 
-</header>
-
-
-<section class="hero">
-
-<h2>Mulai Perjalanan Bahasa Kamu</h2>
-
-<p>
-Kami menyediakan berbagai kursus bahasa seperti Inggris,
-Jepang, Korea, Mandarin, dan Jerman dengan pengajar profesional.
-</p>
-
-<button onclick="scrollProgram()">Lihat Program</button>
-
-</section>
+    </header>
 
 
-<section id="tentang">
+    <section class="hero">
 
-<h2>Tentang Kursus</h2>
+        <h2>Mulai Perjalanan Bahasa Kamu</h2>
 
-<p>
-Kursus Bahasa Global adalah lembaga pendidikan yang membantu
-pelajar dan masyarakat umum untuk mempelajari bahasa asing
-secara efektif. Program kami dirancang untuk semua usia
-dengan metode pembelajaran yang interaktif dan praktis.
-</p>
+        <p>
+            Kami menyediakan berbagai kursus bahasa seperti Inggris,
+            Jepang, Korea, Mandarin, dan Jerman dengan pengajar profesional.
+        </p>
 
-</section>
+        <button onclick="scrollProgram()">Lihat Program</button>
 
-
-<section id="program">
-
-<h2>Program Kursus</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Bahasa Inggris</h3>
-<p>Program populer untuk komunikasi internasional.</p>
-</div>
-
-<div class="card">
-<h3>Bahasa Jepang</h3>
-<p>Cocok untuk studi atau bekerja di Jepang.</p>
-</div>
-
-<div class="card">
-<h3>Bahasa Korea</h3>
-<p>Belajar bahasa Korea dengan metode modern.</p>
-</div>
-
-<div class="card">
-<h3>Bahasa Mandarin</h3>
-<p>Bahasa bisnis internasional yang penting.</p>
-</div>
-
-</div>
-
-<table>
-
-<tr>
-<th>Bahasa</th>
-<th>Durasi</th>
-<th>Biaya</th>
-</tr>
-
-<tr>
-<td>Inggris</td>
-<td>3 Bulan</td>
-<td>Rp 1.500.000</td>
-</tr>
-
-<tr>
-<td>Jepang</td>
-<td>4 Bulan</td>
-<td>Rp 1.800.000</td>
-</tr>
-
-<tr>
-<td>Korea</td>
-<td>4 Bulan</td>
-<td>Rp 1.800.000</td>
-</tr>
-
-<tr>
-<td>Mandarin</td>
-<td>5 Bulan</td>
-<td>Rp 2.000.000</td>
-</tr>
-
-</table>
-
-</section>
+    </section>
 
 
-<section id="alumni">
+    <section id="tentang">
 
-<h2>Alumni Kami</h2>
+        <h2>Tentang Kursus</h2>
 
-<div class="alumni">
+        <p>
+            Kursus Bahasa Global adalah lembaga pendidikan yang membantu
+            pelajar dan masyarakat umum untuk mempelajari bahasa asing
+            secara efektif. Program kami dirancang untuk semua usia
+            dengan metode pembelajaran yang interaktif dan praktis.
+        </p>
 
-<img src="https://i.pravatar.cc/150?img=10">
-<img src="https://i.pravatar.cc/150?img=20">
-<img src="https://i.pravatar.cc/150?img=30">
-<img src="https://i.pravatar.cc/150?img=40">
-
-</div>
-
-</section>
+    </section>
 
 
-<section id="daftar">
+    <section id="program">
 
-<h2>Form Pendaftaran</h2>
+        <h2>Program Kursus</h2>
 
-<form id="formDaftar">
+        <div class="cards">
 
-<input type="text" id="nama" placeholder="Nama lengkap">
+            <div class="card">
+                <h3>Bahasa Inggris</h3>
+                <p>Program populer untuk komunikasi internasional.</p>
+            </div>
 
-<input type="email" id="email" placeholder="Email">
+            <div class="card">
+                <h3>Bahasa Jepang</h3>
+                <p>Cocok untuk studi atau bekerja di Jepang.</p>
+            </div>
 
-<select id="programSelect">
+            <div class="card">
+                <h3>Bahasa Korea</h3>
+                <p>Belajar bahasa Korea dengan metode modern.</p>
+            </div>
 
-<option value="">Pilih Program</option>
-<option>Bahasa Inggris</option>
-<option>Bahasa Jepang</option>
-<option>Bahasa Korea</option>
-<option>Bahasa Mandarin</option>
+            <div class="card">
+                <h3>Bahasa Mandarin</h3>
+                <p>Bahasa bisnis internasional yang penting.</p>
+            </div>
 
-</select>
+        </div>
 
-<button type="submit">Daftar Sekarang</button>
+        <!-- Container Table: Agar tabel bisa di-scroll secara horizontal di layar kecil -->
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Bahasa</th>
+                    <th>Durasi</th>
+                    <th>Biaya</th>
+                </tr>
+                <tr>
+                    <td>Inggris</td>
+                    <td>3 Bulan</td>
+                    <td>Rp 1.500.000</td>
+                </tr>
+                <tr>
+                    <td>Jepang</td>
+                    <td>4 Bulan</td>
+                    <td>Rp 1.800.000</td>
+                </tr>
+                <tr>
+                    <td>Korea</td>
+                    <td>4 Bulan</td>
+                    <td>Rp 1.800.000</td>
+                </tr>
+                <tr>
+                    <td>Mandarin</td>
+                    <td>5 Bulan</td>
+                    <td>Rp 2.000.000</td>
+                </tr>
+            </table>
+        </div>
 
-</form>
-
-</section>
+    </section>
 
 
-<footer id="kontak">
+    <section id="alumni">
 
-<h3>Kontak Kami</h3>
+        <h2>Alumni Kami</h2>
 
-<p>WhatsApp : 0812-3456-7890</p>
-<p>Email : kursusglobal@email.com</p>
+        <!-- Alumni Container: Menggunakan flex-wrap agar gambar turun ke bawah jika layar sempit -->
+        <div class="alumni-container">
+            <img src="https://i.pravatar.cc/150?img=10">
+            <img src="https://i.pravatar.cc/150?img=20">
+            <img src="https://i.pravatar.cc/150?img=30">
+            <img src="https://i.pravatar.cc/150?img=40">
+        </div>
 
-<div class="sosmed">
+    </section>
 
-<a href="#">Instagram</a>
-<a href="#">Facebook</a>
-<a href="#">TikTok</a>
 
-</div>
+    <section id="daftar">
 
-<p class="copy">© 2026 Kursus Bahasa Global</p>
+        <h2>Form Pendaftaran</h2>
 
-</footer>
+        <form id="formDaftar">
 
-<script src="uts ppw.js"></script>
+            <input type="text" id="nama" placeholder="Nama lengkap">
+
+            <input type="email" id="email" placeholder="Email">
+
+            <select id="programSelect">
+
+                <option value="">Pilih Program</option>
+                <option>Bahasa Inggris</option>
+                <option>Bahasa Jepang</option>
+                <option>Bahasa Korea</option>
+                <option>Bahasa Mandarin</option>
+
+            </select>
+
+            <button type="submit">Daftar Sekarang</button>
+
+        </form>
+
+    </section>
+
+
+    <footer id="kontak">
+
+        <h3>Kontak Kami</h3>
+
+        <p>WhatsApp : 0812-3456-7890</p>
+        <p>Email : kursusglobal@email.com</p>
+
+        <div class="sosmed">
+
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">TikTok</a>
+
+        </div>
+
+        <p class="copy">© 2026 Kursus Bahasa Global</p>
+
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>

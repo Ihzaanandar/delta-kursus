@@ -1,143 +1,327 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-background:#f7f9fc;
-color:#333;
+body {
+    background: #f7f9fc;
+    color: #333;
 }
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
-background:#ffffff;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
+/* Navigation */
+header {
+    display: flex;
+    /* Flexbox: Membuat layout header yang fleksibel */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:#555;
-font-weight:500;
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-.hero{
-text-align:center;
-padding:80px 20px;
-background:linear-gradient(120deg,#dfe9f3,#ffffff);
+.nav-links a:hover {
+    color: #6c8cff;
 }
 
-.hero h2{
-font-size:32px;
-margin-bottom:10px;
+/* Logika Menu Hamburger (Murni CSS): Mengandalkan status 'checked' dari checkbox */
+.menu-toggle {
+    display: none;
 }
 
-.hero button{
-padding:10px 20px;
-border:none;
-background:#6c8cff;
-color:white;
-border-radius:8px;
-cursor:pointer;
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
 }
 
-section{
-padding:60px 10%;
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #333;
+    border-radius: 3px;
+    transition: 0.3s;
 }
 
-table{
-width:100%;
-border-collapse:collapse;
-margin-top:20px;
+/* Sections */
+section {
+    padding: 60px 10%;
 }
 
-table th, table td{
-border:1px solid #ddd;
-padding:10px;
-text-align:center;
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(120deg, #dfe9f3, #ffffff);
 }
 
-.galeri{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
-.card{
-background:white;
-padding:15px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-text-align:center;
-transition:0.3s;
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #666;
 }
 
-.card:hover{
-transform:translateY(-5px);
+.hero button {
+    padding: 12px 30px;
+    border: none;
+    background: #6c8cff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
-.card img{
-width:120px;
-border-radius:50%;
+.hero button:hover {
+    background: #5a7be0;
 }
 
-form{
-display:flex;
-flex-direction:column;
-gap:10px;
-max-width:400px;
+/* Program Cards */
+.cards {
+    display: grid;
+    /* Grid Layout: Sangat efisien untuk membuat kartu yang responsif */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* auto-fit: Menyesuaikan jumlah kolom secara otomatis */
+    gap: 20px;
+    margin-top: 30px;
 }
 
-input, select{
-padding:10px;
-border:1px solid #ccc;
-border-radius:6px;
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: 0.3s;
 }
 
-button{
-padding:10px;
-border:none;
-background:#6c8cff;
-color:white;
-border-radius:6px;
-cursor:pointer;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-footer{
-background:#1f2937;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:40px;
+.card h3 {
+    margin-bottom: 10px;
+    color: #1f2937;
 }
 
-.sosmed a{
-margin:10px;
-color:#ddd;
-text-decoration:none;
+/* Table */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    /* Scroll horizontal: Mencegah tabel merusak layout di layar kecil */
+    margin-top: 30px;
+    border-radius: 8px;
+    border: 1px solid #eee;
 }
 
-.copy{
-margin-top:10px;
-font-size:14px;
+table {
+    width: 100%;
+    min-width: 600px;
+    /* Ensures table doesn't compress too much */
+    border-collapse: collapse;
 }
 
-/* responsive */
-
-@media(max-width:768px){
-
-header{
-flex-direction:column;
-gap:10px;
+table th,
+table td {
+    border: 1px solid #eee;
+    padding: 15px;
+    text-align: left;
 }
 
-.galeri{
-justify-content:center;
+table th {
+    background: #f9fafb;
+    font-weight: 600;
 }
 
+/* Alumni */
+.alumni-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.alumni-container img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form */
+#daftar {
+    background: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 30px auto 0;
+}
+
+input,
+select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+}
+
+form button {
+    padding: 12px;
+    border: none;
+    background: #6c8cff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+/* Footer */
+footer {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 40px;
+}
+
+.sosmed {
+    margin: 20px 0;
+}
+
+.sosmed a {
+    margin: 0 10px;
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sosmed a:hover {
+    color: #6c8cff;
+}
+
+.copy {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+/* Media Queries: Mengubah gaya berdasarkan lebar layar perangkat */
+
+/* Desktop Sedang / Tablet Laptop */
+@media (max-width: 992px) {
+
+    header,
+    section {
+        padding-left: 5%;
+        /* Mengurangi padding agar konten lebih luas di layar lebih kecil */
+        padding-right: 5%;
+    }
+}
+
+/* Mobile / Tablet Kecil (HP) */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .tagline {
+        display: none;
+        /* Menyembunyikan tagline di HP agar hemat ruang */
+    }
+
+    /* Menampilkan icon hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Mengubah menu navigasi menjadi panel melayang (dropdown) */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    /* Menu Toggle Switch */
+    .menu-toggle:checked~.nav-links {
+        display: flex;
+    }
+
+    /* Animate Hamburger */
+    .menu-toggle:checked~.hamburger span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle:checked~.hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked~.hamburger span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .alumni-container img {
+        width: 60px;
+        height: 60px;
+    }
 }
